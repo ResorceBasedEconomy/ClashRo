@@ -1,0 +1,8 @@
+<article class="card" [class]="mode" 
+            [ngClass]="{selected: card.selected}">
+              <img [src]="getUrl(card)" />
+              <h4 class="card-name">{{ card.name }}</h4>
+
+              <p class="card-cost"><span>{{ card.elixirCost }}</span></p>
+
+</article>

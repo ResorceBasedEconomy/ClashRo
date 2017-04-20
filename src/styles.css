@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*@import './css/index'*/
+@import '../node_modules/sweetalert/dist/sweetalert.css';
+
+
+body {
+    background-color: rgb(0, 103, 196);
+    font-family: 'Rammetto One', cursive;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+

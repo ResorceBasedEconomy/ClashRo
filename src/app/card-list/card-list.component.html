@@ -1,0 +1,12 @@
+<section class="card-list">
+    <h4>Showing {{cards.length}} Cards</h4>
+       <div name="list" class="flex">
+        <app-card *ngFor="let card of cards" [card]="card" [mode]="'preview'" 
+            (click)="toggleCardSelection(card._id)" >
+        
+         </app-card>
+         </div>
+
+      
+    
+  </section>

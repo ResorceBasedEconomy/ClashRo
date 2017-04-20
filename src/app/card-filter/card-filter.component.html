@@ -1,0 +1,24 @@
+  <section class="card-filter flex">
+      <label>
+        By Type
+        <select [(ngModel)]="cardsFilter.byType" (change)="applyFilter()">
+          <option value="">All</option>
+          <option *ngFor="let cardType of cardTypes" >{{cardType}}</option>
+        </select>
+      </label>
+      <label>
+        Max Arena
+        <select [(ngModel)]="cardsFilter.byArena" (change)="applyFilter()">
+          <option value="">All</option>
+          <option *ngFor="let _ of arenas; let idx = index;" >{{idx}}</option>
+        </select>
+      </label>
+      <br><br>
+      <label>
+        
+        <input type="number" [(ngModel)]="cardsFilter.byMaxCost" placeholder="By Max Cost" (input)="applyFilter()">
+      </label>
+      <label>
+        <input type="text" [(ngModel)]="cardsFilter.byName" placeholder="By Names" (input)="applyFilter()">
+      </label>
+  </section>
