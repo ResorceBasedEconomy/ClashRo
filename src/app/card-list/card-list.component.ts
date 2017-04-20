@@ -15,7 +15,7 @@ export class CardListComponent implements OnInit {
   ngOnInit() {
   }
   toggleCardSelection (cardId) {
-    console.log('emitting: ', cardId);
+    // console.log('emitting: ', cardId);
       this.toggle.emit({cardId});
   }
 

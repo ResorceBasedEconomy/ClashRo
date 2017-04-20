@@ -1,17 +1,1 @@
-
-<section class="deck-edit">
-    <section class="deck-preview ">
-      <div name="list" class="flex" >
-        <app-card *ngFor="let card of selectedCards" 
-              [card]="card" 
-              [mode]="'deck-preview'"></app-card>  
-      </div>
-    </section>
-    <section [hidden]="!deckReady" class="deck-ready-info">
-        <h3>Average Elixir Cost: {{avgElixirCost}}</h3>
-        <button (click)="showReviewModal()">Review</button>
-        <button (click)="stratGame()"> <a routerLink="/game-board" routerLinkActive="active">Start Game</a></button>
-    </section>
-    <app-card-filter (changed)="applyFilter($event)"></app-card-filter>
-    <app-card-list [cards]="cardsToShow" (toggle)="toggleCardSelection($event)"></app-card-list>
-  </section>
+<router-outlet></router-outlet>

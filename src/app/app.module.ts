@@ -12,6 +12,9 @@ import { CardComponent } from './card/card.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { CardFilterComponent } from './card-filter/card-filter.component';
 import { GameBoardComponent } from './game-board/game-board.component';
+import { GameBoardModule } from './game-board/game-board.module';
+import { LobbyComponent } from './lobby/lobby.component';
+
 
 @NgModule({
   declarations: [
@@ -19,13 +22,15 @@ import { GameBoardComponent } from './game-board/game-board.component';
     CardComponent,
     CardListComponent,
     CardFilterComponent,
-    GameBoardComponent
+    GameBoardComponent,
+    LobbyComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GameBoardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

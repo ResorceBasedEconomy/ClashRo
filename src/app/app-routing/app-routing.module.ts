@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GameBoardComponent } from '../game-board/game-board.component';
+import { LobbyComponent } from '../lobby/lobby.component';
 
 const appRoutes: Routes = [
   {
@@ -8,7 +9,8 @@ const appRoutes: Routes = [
     component: GameBoardComponent,
     outlet: 'popup'
   },
-  { path: '',   redirectTo: '/', pathMatch: 'full' },
+  { path: '',   redirectTo: '/lobby', pathMatch: 'full' },
+  { path: 'lobby', component: LobbyComponent  },
   // { path: '**', component: PageNotFoundComponent }
 ];
 
