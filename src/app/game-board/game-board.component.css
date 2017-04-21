@@ -1,5 +1,6 @@
 .board {
     height: 500px;
+    width: 280px;
     margin: auto;
     background-repeat: no-repeat;
     /*position: absolute;*/
