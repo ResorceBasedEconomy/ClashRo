@@ -77,4 +77,16 @@ export class AppComponent {
     console.log('start game', this.parentRouter);
     // this.parentRouter.navigateByUrl('/login');
   }
+  getRandomFromArr(arr){
+    const item = arr[Math.floor(Math.random()*arr.length)];
+    return item;
+  }
+  getRandomOp(){
+    const op = {name: 'Fat Bastard', health: 7, cards: []}
+      op.cards.push(this.getRandomFromArr(this.cards));
+      op.cards.push(this.getRandomFromArr(this.cards));
+      op.cards.push(this.getRandomFromArr(this.cards));
+      console.log('op is ready', op);
+      return op;
+  }
 }

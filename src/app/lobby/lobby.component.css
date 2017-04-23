@@ -1,0 +1,12 @@
+.deck-ready-info {
+    text-align: center;
+    margin: 5px;
+    
+}
+button {
+    background-color: purple;
+    color: white; 
+    border:0;
+    padding: 1em;
+    border-radius: 4px;
+}
