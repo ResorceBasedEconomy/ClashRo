@@ -1,5 +1,10 @@
 
+const state = {
+    cards: null,
+    myDeck: []
+}
 let cards = null;
+let myDeck = [];
 
 const audio = {
     ready :  new Audio('assets/audio/ready.ogg'),
@@ -24,7 +29,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 const getCards = () => {
-    if (cards) return Promise.resolve(cards);
+    if (state.cards) return Promise.resolve(state.cards);
     // return fetch('http://www.clashapi.xyz/api/cards')
     return fetch('assets/data/cards.json')
                 .then(res => res.json())
@@ -32,7 +37,7 @@ const getCards = () => {
 
                     // res = res.filter(card => knownCards.includes(card.idName));
 
-                    cards = res.map(card => {
+                    state.cards = res.map(card => {
                         card.offense = getRandomIntInclusive(1, 7);
                         card.defense = getRandomIntInclusive(1, 7);
                         // card.audioUrl = `assets/audio/card/${card.idName}.mp3`;
@@ -40,7 +45,7 @@ const getCards = () => {
                         card.audio = new Audio(card.audioUrl);
                         return card;
                     });
-                    return cards;
+                    return state.cards;
                 })
                 
 }

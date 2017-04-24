@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./lobby.component.css']
 })
 export class LobbyComponent implements OnInit {
- cards = [];
+  cards = [];
   filter = null;
   deckReview = null;
   parentRouter = Router;
@@ -70,8 +70,9 @@ export class LobbyComponent implements OnInit {
 
   }
   stratGame() {
-    console.log('start game', this.parentRouter);
-    // this.parentRouter.navigateByUrl('/login');
+
+   
   }
+  
 
 }
