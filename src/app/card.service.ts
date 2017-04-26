@@ -45,6 +45,7 @@ const getCards = () => {
                         card.audio = new Audio(card.audioUrl);
                         return card;
                     });
+                    
                     return state.cards;
                 })
                 
