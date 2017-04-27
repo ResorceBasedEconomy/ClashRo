@@ -9,7 +9,7 @@ import CardService from '../card.service';
 })
 export class GameBoardComponent implements OnInit {
   op = null;
-  
+  deck = [];
   constructor() { }
 
   ngOnInit() {

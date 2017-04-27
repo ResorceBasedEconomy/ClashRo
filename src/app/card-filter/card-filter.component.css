@@ -1,7 +1,7 @@
 .card-filter {
     padding: 1em;
     background-color: rgba(3, 3, 3, 0.2);
-  }
-      label {
-      display: inline-block;
-    }
+}
+label {
+    display: inline-block;
+}
