@@ -14,6 +14,9 @@ export class GameBoardComponent implements OnInit {
 
   ngOnInit() {
     this.op = CardService.getRandomOp();
+    this.deck = CardService.getDeck();
+    console.log(this.deck);
+    
   }
   
 
