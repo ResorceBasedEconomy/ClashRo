@@ -71,7 +71,7 @@ export class LobbyComponent implements OnInit {
   }
   stratGame() {
     CardService.setDeck(this.selectedCards);
-   
+    this.showReviewModal();
   }
   
 

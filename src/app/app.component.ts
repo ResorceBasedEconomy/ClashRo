@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import CardService from './card.service';
-import * as swal from 'sweetalert';
+
 
 import {Router} from '@angular/router';
 

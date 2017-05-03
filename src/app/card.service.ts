@@ -3,8 +3,6 @@ const state = {
     cards: null,
     myDeck: []
 }
-// let cards = null;
-// let myDeck = [];
 
 const audio = {
     ready :  new Audio('assets/audio/ready.ogg'),
