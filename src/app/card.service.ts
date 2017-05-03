@@ -3,8 +3,6 @@ const state = {
     cards: null,
     myDeck: []
 }
-let cards = null;
-let myDeck = [];
 
 const audio = {
     ready :  new Audio('assets/audio/ready.ogg'),
@@ -50,8 +48,13 @@ const getCards = () => {
                 })
                 
 }
-
+const setDeck = (deck) => {
+    state.myDeck = deck;
+}
 const getDeck = () => {
+    return state.myDeck;
+}
+const getStorageDeck = () => {
     if (localStorage.deck) {
         let cards = JSON.parse(localStorage.deck);
         return cards.map(card => { 
@@ -61,7 +64,7 @@ const getDeck = () => {
 }
 
 const saveDeck = deck => {
-    const deckToSave = deck.map(card => {delete card.audio; return card})
+    const deckToSave = state.myDeck.map(card => {delete card.audio; return card})
     localStorage.deck = JSON.stringify(deckToSave);
 }
 
@@ -126,6 +129,8 @@ const analyzeDeck = deck => {
 
 export default {
     getCards,
+    getStorageDeck,
+    setDeck,
     getDeck,
     saveDeck,
     analyzeDeck,

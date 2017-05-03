@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import CardService from '../card.service';
 import * as swal from 'sweetalert';
 
@@ -14,7 +14,7 @@ export class LobbyComponent implements OnInit {
   filter = null;
   deckReview = null;
   parentRouter = Router;
-
+  
   ngOnInit() {
     CardService.getCards().then(cards => this.cards = cards)
   }
@@ -70,8 +70,8 @@ export class LobbyComponent implements OnInit {
 
   }
   stratGame() {
-
-   
+    CardService.setDeck(this.selectedCards);
+    this.showReviewModal();
   }
   
 
